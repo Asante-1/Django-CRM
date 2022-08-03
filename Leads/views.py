@@ -29,6 +29,7 @@ class LeadListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         user = self.request.user
+
         if user.is_organizer:
             queryset = Lead.objects.filter(
                 organization=user.userprofile,
@@ -105,6 +106,7 @@ class LeadUpdateView(OrganizerAndLoginRequiredMixin, UpdateView):
 class LeadDeleteView(LoginRequiredMixin, DeleteView):
     template_name = "Leads/lead_delete.html"
 
+
     def get_queryset(self):
         user = self.request.user
         queryset = Lead.objects.filter(organization=user.userprofile)
@@ -125,7 +127,6 @@ class AssignAgentView(OrganizerAndLoginRequiredMixin, FormView):
         return kwargs
 
     def form_valid(self, form):
-        print(form.cleaned_data)
         form.save()
         return super(AssignAgentView, self).form_valid(form)
 
@@ -291,7 +292,6 @@ class FollowUpDeleteView(LoginRequiredMixin, DeleteView):
             # filters for logged in agent
             queryset = queryset.filter(lead__agent__user=user)
         return queryset
-
 
     def get_success_url(self):
 

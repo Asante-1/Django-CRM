@@ -6,7 +6,8 @@ from django.contrib.auth.views import (
     PasswordResetView,
     PasswordResetConfirmView,
     PasswordResetDoneView,
-    PasswordResetCompleteView
+    PasswordResetCompleteView,
+
 )
 
 app_name='Leads'

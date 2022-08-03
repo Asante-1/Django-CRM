@@ -6,7 +6,6 @@ class User(AbstractUser):
     is_organizer = models.BooleanField(default=True)
     is_agent = models.BooleanField(default=False)
 
-
 class UserProfile(models.Model):
     user = models.OneToOneField(User, models.CASCADE)
 
@@ -17,7 +16,6 @@ class UserProfile(models.Model):
 class LeadManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset()
-
 
 
 class Lead(models.Model):

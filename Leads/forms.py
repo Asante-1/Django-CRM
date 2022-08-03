@@ -3,6 +3,7 @@ from .models import Lead,Agent,Category, FollowUpModel
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
 
+
 User = get_user_model()
 
 class LeadModelForm(forms.ModelForm):
@@ -17,14 +18,15 @@ class LeadModelForm(forms.ModelForm):
             'phone_number',
             'email',
             'profile_pictures',
+            'category'
         }
 
-    # def clean_email(self):
-    #     email = self.cleaned_data.get('email')
-    #     qs = Lead.objects.filter(email=email)
-    #     if qs.exists():
-    #         raise forms.ValidationError("Email already exist.")
-    #     return email
+        def clean_email(self):
+            email = self.cleaned_data.get('email')
+            qs = Lead.objects.filter(email=email)
+            if qs.exists():
+                raise forms.ValidationError("Email already exist.")
+            return email
 
 
 class LeadForm(forms.Form):
@@ -42,12 +44,12 @@ class CustomerCreationForm(UserCreationForm):
 
         def clean_username(self):
             username = self.cleaned_data.get('username')
-            qs = Lead.objects.filter(username=username)
+            qs = User.objects.filter(username=username)
             if qs.exists():
                 raise forms.ValidationError("username already exist")
 
 class AssignAgentForm(forms.Form):
-    agent = forms.ModelChoiceField(queryset= Agent.objects.none())
+    agent = forms.ModelChoiceField(queryset=Agent.objects.none())
 
     def __init__(self, *args, **kwargs):
         request = kwargs.pop("request")
