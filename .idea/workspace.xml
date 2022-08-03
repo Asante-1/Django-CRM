@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1446f70b-edc7-455c-a12b-cb1169a53a3f" name="Default Changelist" comment="Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Leads/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Leads/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads/templates/Leads/lead_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Leads/templates/Leads/lead_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Leads/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Leads/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Leads/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agents/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/agents/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/landing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="1446f70b-edc7-455c-a12b-cb1169a53a3f" name="Default Changelist" comment="Updated" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
