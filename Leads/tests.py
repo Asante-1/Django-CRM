@@ -12,8 +12,14 @@ class LandingPageTest(TestCase):
     def setUp(self):
         # creating a user
         self.user = User.objects.create_user(username='Michael', password='yourchoice')
+        
+         # agent user
+        self.user2 = User.objects.create_user(username="James", password='goodboy')
+        self.user2.is_organizer = False
+        self.user2.is_agent = True
 
-        #creating a lead nd assigning the organizer to the created organizer user
+
+        #creating a lead and assigning the organizer to the created organizer user
         self.created_lead_user = Lead.objects.create(first_name='Jude',
                                                      last_name='Asamoah', age='10',
                                                      description='This is a test lead',
@@ -24,10 +30,14 @@ class LandingPageTest(TestCase):
                                                      )
 
 
-    # testing the organizer user
+    # testing the organizer user and agent user
     def test_user_created(self):
         self.assertEqual(self.user.username, "Michael")
         self.assertEqual(self.user.is_organizer, True)
+        
+        self.assertEqual(self.user2.username, "James")
+        self.assertEqual(self.user2.is_agent, True)
+
 
     #testing the created lead
     def test_lead_created(self):
