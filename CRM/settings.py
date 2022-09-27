@@ -16,7 +16,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DEBUG = True
+DEBUG = False
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -24,7 +24,7 @@ DEBUG = True
 SECRET_KEY = 'g_&@&h9n4xp9v@t36om&2itv06@2t+$tw*!r*-%k+mfrbhzgc2'
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','theocrm.herokuapp.com']
 
 
 # Application definition
